@@ -12,4 +12,5 @@ This repo includes motion ready react components that I've built.
 
 - [x] Switcher 
 - [x] Underlined links
-- [ ] Splash card
+- [x] Splash card
+- [x] CTA buttons
