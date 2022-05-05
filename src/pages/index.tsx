@@ -2,6 +2,7 @@ import SplashCard from "@/common/SplashCard"
 import Switch from "@/common/Switch"
 import UndelinedLinks from "@/common/UnderlinedLinks"
 import CallToAction from "@/common/CallToAction"
+import Dialog from "@/common/Dialog"
 
 const Home = () => {
   return (
@@ -21,6 +22,12 @@ const Home = () => {
       <div className="flex flex-col space-y-2">
         <span>Call To Action</span>
         <CallToAction />
+      </div>
+      <div className="flex flex-col space-y-2">
+        <span>Modal animation with RadixUI</span>
+        <div className="w-1/12">
+        <Dialog />
+        </div>
       </div>
     </div>
   )
