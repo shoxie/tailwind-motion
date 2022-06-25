@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^0.1.7",
+    "@tailwindcss/line-clamp": "^0.4.0",
     "classnames": "^2.3.1",
     "framer-motion": "^6.2.8",
     "next": "12.1.2",

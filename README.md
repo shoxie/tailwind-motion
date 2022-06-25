@@ -6,7 +6,7 @@ This repo includes motion ready react components that I've built.
 
 - React (Nextjs)
 - Framer-motion
-- Tailwindcss
+- Tailwindcss: line-clamp plugin
 
 ### Todo
 

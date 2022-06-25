@@ -6,20 +6,22 @@ import { BsMoon, BsSun } from "react-icons/bs";
 type Props = {
     width: string;
     height: string;
+    onSwitchChange: (state: boolean) => void
 }
 
-const Switch: FC<Props> = ({ width, height }) => {
+const Switch: FC<Props> = ({ width, height, onSwitchChange }) => {
   const [isSwitched, setIsSwitched] = useState(false);
 
   const switchState = () => {
     setIsSwitched(!isSwitched);
+    onSwitchChange(!isSwitched)
   };
 
   return (
     <div
       className={classNames(
-        "flex flex-row items-center p-1 rounded-full bg-red-700",
-        isSwitched ? "justify-end" : "justify-start"
+        "flex flex-row items-center p-1 py-3 rounded-full cursor-pointer transition-all relative",
+        isSwitched ? "justify-end bg-green-400" : "justify-start bg-gray-400"
       )}
       style={{ width, height }}
       onClick={switchState}
@@ -32,9 +34,9 @@ const Switch: FC<Props> = ({ width, height }) => {
           >
             <motion.div
               key={isSwitched ? "moon-icon" : "sun-icon"}
-              initial={{ y: -30, opacity: 0 }}
+              initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 30, opacity: 0 }}
+              exit={{ y: "100%", opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
               {isSwitched ? (
