@@ -6,6 +6,7 @@ import Dialog from "@/common/Dialog";
 import NotificationContainer from "@/common/Notification/Container";
 import classNames from "classnames";
 import { useState } from "react";
+import ShareButton from "@/common/StyledButton/ShareButton";
 
 const Home = () => {
   const [isDark, setIsDark] = useState<boolean>(false);
@@ -16,9 +17,7 @@ const Home = () => {
   };
 
   return (
-    <div className={classNames(
-      "",
-      isDark ? "dark" : "")}>
+    <div className={classNames("", isDark ? "dark" : "")}>
       <div
         className={classNames(
           "transition-all flex flex-col px-10 space-y-5 dark:bg-[#232136] dark:text-[#e0def4] min-h-screen"
@@ -48,6 +47,12 @@ const Home = () => {
           <span>Modal animation with RadixUI</span>
           <div className="w-1/12">
             <Dialog />
+          </div>
+        </div>
+        <div className="flex flex-col items-center space-y-2">
+          <span>Share button</span>
+          <div>
+            <ShareButton />
           </div>
         </div>
         <div className="fixed top-5 right-5 w-96">
