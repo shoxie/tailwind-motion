@@ -25,9 +25,9 @@ const PageTransition = () => {
                 background: "green",
                 transition: {
                     duration: 1,
-                    ease: "easeInOut",
-                    type: "spring"
-                }
+                    type: "spring",
+                    
+                },
             })
         } else {
             await control.start({
@@ -42,7 +42,6 @@ const PageTransition = () => {
                 background: "red",
                 transition: {
                     duration: 1,
-                    ease: "easeInOut",
                     type: "spring"
                 }
             })

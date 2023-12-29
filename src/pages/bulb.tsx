@@ -52,8 +52,8 @@ const LightBulb = () => {
                         anim.start({
                             y: 0,
                             transition: {
-                                bounceStiffness: 600,
-                                bounceDamping: 20,
+                                stiffness: 600,
+                                damping: 20,
                                 type: "spring"
                             }
                         })
