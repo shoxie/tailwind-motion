@@ -1,6 +1,7 @@
 import { PiLightbulbThin } from "react-icons/pi";
 import { motion, useAnimation, useDragControls, useMotionValue, useTransform } from "framer-motion";
 import { useState } from "react";
+import Grid from "@/common/Background/Grid";
 
 const LightBulb = () => {
     const controls = useDragControls();
@@ -21,6 +22,9 @@ const LightBulb = () => {
                 }
             }}
         >
+            {
+                isLight && <Grid />
+            }
             <div className="text-9xl relative flex flex-col items-center">
                 <motion.div initial={{
                     pathLength: 0
